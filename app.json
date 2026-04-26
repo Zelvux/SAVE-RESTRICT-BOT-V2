@@ -1,0 +1,53 @@
+{
+  "name": "Save Restricted Content Bot",
+  "description": "Telegram bot to save restricted content",
+  "logo": "https://telegra.ph/file/1c3e0e7c3b6a6d3c0f7c1.jpg",
+  "keywords": ["telegram", "bot", "python"],
+  "repository": "https://github.com/yourusername/yourrepo",
+  "success_url": "https://t.me/your_bot_username",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Enter your Telegram Bot Token",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Enter your API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Enter your API HASH",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "Admin user IDs (comma separated)",
+      "value": "123456789"
+    },
+    "DB_URI": {
+      "description": "MongoDB URI",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "Database Name",
+      "value": "SaveRestricted2"
+    },
+    "LOG_CHANNEL": {
+      "description": "Log channel ID (e.g. -100xxxx)",
+      "required": true
+    },
+    "ERROR_MESSAGE": {
+      "description": "Send error messages to users (True/False)",
+      "value": "True"
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
